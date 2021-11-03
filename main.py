@@ -11,7 +11,10 @@ def divide(str_with_ints: str) -> Union[float, str]:
         error response in "Error code: {error message}: str;
     """
     try:
-        a, b = str_with_ints.split(" ")
+        a, b = str_with_ints.split(" ", maxsplit=1)
         return int(a) / int(b)
     except Exception as error:
         return f"Error code: {error}"
+
+
+print(divide("7 2 "))
