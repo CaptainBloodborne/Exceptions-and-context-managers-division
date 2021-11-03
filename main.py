@@ -15,6 +15,3 @@ def divide(str_with_ints: str) -> Union[float, str]:
         return int(a) / int(b)
     except Exception as error:
         return f"Error code: {error}"
-
-
-print(divide("7 2 "))
